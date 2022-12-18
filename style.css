@@ -147,6 +147,7 @@ body {
     padding: 0.75rem 2rem;
     border-style: none;
     border-radius: 2rem;
+    transition: color .4s, background-color .4s ease-in-out;
 }
 
 .button-1 {
@@ -165,21 +166,21 @@ body {
 
 .button-1:hover {
     color: var(--clr-neutral-300);
-    padding: 0.6rem 2rem;
+    padding: 0.6rem 1.85rem;
     border: 0.15rem solid var(--clr-neutral-300);
     background-color: var(--clr-primary-300);
 }
 
 .button-2:hover {
     color: var(--clr-neutral-300);
-    padding: 0.6rem 2rem;
+    padding: 0.6rem 1.85rem;
     border: 0.15rem solid var(--clr-neutral-300);
     background-color: var(--clr-primary-700);
 }
 
 .button-3:hover {
     color: var(--clr-neutral-300);
-    padding: 0.6rem 2rem;
+    padding: 0.6rem 1.85rem;
     border: 0.15rem solid var(--clr-neutral-300);
     background-color: var(--clr-primary-900);
 }
