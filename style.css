@@ -1,0 +1,211 @@
+:root {
+    --clr-primary-300: hsl(31, 77%, 52%);
+    --clr-primary-700: hsl(184, 100%, 22%);
+    --clr-primary-900: hsl(179, 100%, 13%);
+
+    --clr-neutral-300: hsl(0, 0%, 95%);
+    --clr-neutral-500: hsla(0, 0%, 100%, 0.75);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* general styling */
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    background-color: var(--clr-neutral-300);
+
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0rem auto;
+}
+
+.product {
+    border: 1px solid var(--clr-neutral-300);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    color: var(--clr-neutral-300);
+    padding: 3rem;
+
+    display: grid;
+    gap: 1.25rem;
+}
+
+.card-1 {
+    background-color: var(--clr-primary-300);
+}
+
+.card-2 {
+    background-color: var(--clr-primary-700);
+}
+
+.card-3 {
+    background-color: var(--clr-primary-900);
+}
+
+.heading {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+.description {
+    color: var(--clr-neutral-500);
+}
+
+.button {
+    text-decoration: none;
+    width: max-content;
+    text-transform: capitalize;
+    background-color: var(--clr-neutral-300);
+    margin-top: 4rem;
+    padding: 0.75rem 2rem;
+    border-style: none;
+    border-radius: 2rem;
+}
+
+.button-1 {
+    color: var(--clr-primary-300);
+}
+
+.button-2 {
+    color: var(--clr-primary-700);
+}
+
+.button-3 {
+    color: var(--clr-primary-900);
+}
+
+/* active states */
+
+.button-1:hover {
+    color: var(--clr-neutral-300);
+    padding: 0.6rem 2rem;
+    border: 0.15rem solid var(--clr-neutral-300);
+    background-color: var(--clr-primary-300);
+}
+
+.button-2:hover {
+    color: var(--clr-neutral-300);
+    padding: 0.6rem 2rem;
+    border: 0.15rem solid var(--clr-neutral-300);
+    background-color: var(--clr-primary-700);
+}
+
+.button-3:hover {
+    color: var(--clr-neutral-300);
+    padding: 0.6rem 2rem;
+    border: 0.15rem solid var(--clr-neutral-300);
+    background-color: var(--clr-primary-900);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: fit-content;
+        max-width: 80%;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .button {
+        margin-top: 0.5rem;
+    }
+
+    .product {
+        grid-template-columns: 1fr;
+        margin: 4rem auto;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1020px) {
+    .container {
+        max-width: 95%;
+    }
+}
